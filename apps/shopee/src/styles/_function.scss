@@ -1,0 +1,35 @@
+@use 'sass:math';
+
+$browser-context: 16;
+
+@function em($pixels, $context: $browser-context) {
+  @if unitless($pixels) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if unitless($context) {
+    $context: $context * 1px;
+  }
+
+  @return math.div($pixels, $context) * 1em;
+}
+
+@function line-height-to-number($lineHeight, $fontSize: $browser-context) {
+  @if not unitless($lineHeight) {
+    $lineHeight: $lineHeight / 1px;
+  }
+
+  @if not unitless($fontSize) {
+    $fontSize: math.div($fontSize * 16, 1rem);
+  }
+
+  @return math.div($lineHeight, $fontSize);
+}
+
+@function max-height($lineHeight, $lineAmount) {
+  @return $lineHeight * $lineAmount * 1em;
+}
+
+@function percent-width($min-width, $screen-width) {
+  @return math.div($min-width, $screen-width) * 100vw;
+}

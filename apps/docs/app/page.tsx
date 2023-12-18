@@ -3,6 +3,7 @@ import { Card } from "@repo/ui/card";
 import { Code } from "@repo/ui/code";
 import styles from "./page.module.css";
 import { Button } from "@repo/ui/button";
+import { ICardProps } from "@repo/ui/types";
 
 function Gradient({
   conic,
@@ -26,6 +27,10 @@ function Gradient({
     />
   );
 }
+const test: ICardProps = {
+  title: "Docs of Huy Hung1",
+  className: "test",
+};
 
 const LINKS = [
   {
@@ -54,9 +59,11 @@ const LINKS = [
 export default function Page(): JSX.Element {
   return (
     <main className={styles.main}>
+      {test.className}
+      {test.title}
       <div className={styles.description}>
         <p>
-          examples/basic&nbsp;
+          DOCUMENT EXAMPLE
           <Code className={styles.code}>docs</Code>
         </p>
         <div>
@@ -65,7 +72,7 @@ export default function Page(): JSX.Element {
             rel="noopener noreferrer"
             target="_blank"
           >
-            By{" "}
+            By
             <Image
               alt="Vercel Logo"
               className={styles.vercelLogo}

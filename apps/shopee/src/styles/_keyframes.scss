@@ -1,0 +1,171 @@
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slide-up-and-fade {
+  from {
+    transform: translateY(2px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-fight-and-fade {
+  from {
+    transform: translateX(-2px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-down-and-fade {
+  from {
+    transform: translateY(-2px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-left-and-fade {
+  from {
+    transform: translateX(2px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes overlay-show {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes content-show {
+  from {
+    transform: translate(-50%, -48%) scale(0.96);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes show-image {
+  from {
+    clip-path: inset(0 50%);
+  }
+
+  to {
+    clip-path: inset(0 60px);
+  }
+}
+
+@keyframes show-image-desktop-hd {
+  from {
+    clip-path: inset(0 50%);
+  }
+
+  to {
+    clip-path: inset(0 40px);
+  }
+}
+
+@keyframes show-image-tablet {
+  from {
+    clip-path: inset(0 50% 40px);
+  }
+
+  to {
+    clip-path: inset(0 40px 40px);
+  }
+}
+
+@keyframes show-image-mobile {
+  from {
+    clip-path: inset(0 50% 20px);
+  }
+
+  to {
+    clip-path: inset(0 20px 20px);
+  }
+}
+
+@keyframes show-video {
+  from {
+    clip-path: inset(0 50% 60px 50% round 20px);
+  }
+
+  to {
+    clip-path: inset(0 0 60px 0 round 20px);
+  }
+}
+
+@keyframes show-video-mobile {
+  from {
+    clip-path: inset(20px 50%);
+  }
+
+  to {
+    clip-path: inset(20px);
+  }
+}
+
+@keyframes first-arrow-animation {
+  0% {
+    left: 50%;
+  }
+
+  100% {
+    left: 150%;
+  }
+}
+
+@keyframes second-arrow-animation {
+  0% {
+    left: -50%;
+  }
+
+  100% {
+    left: 50%;
+  }
+}
