@@ -1,0 +1,54 @@
+$tab-item-min-width: 182px;
+$tab-item-padding: 16px;
+$tab-item-outline-padding: 14px;
+$tab-item-font-size: 15px;
+
+.tab-item {
+  min-width: $tab-item-min-width;
+  padding: $tab-item-padding;
+
+  color: $gray-747a86;
+  font-weight: $font-medium;
+  font-size: $tab-item-font-size;
+  line-height: 1.6;
+  letter-spacing: -0.35px;
+  text-align: center;
+
+  border: 1px solid $gray-e8ebf2;
+  border-bottom: unset;
+  cursor: pointer;
+
+  user-select: none;
+
+  @include hover-able {
+    &:hover {
+      color: $primary-black;
+    }
+  }
+
+  &.active {
+    z-index: $zIndex-5;
+
+    color: $primary-black;
+
+    background-color: $white;
+
+    border-color: $black;
+  }
+
+  &.outline {
+    padding: $tab-item-outline-padding;
+
+    background-color: $white;
+    border: unset;
+
+    &.active {
+      border-bottom: 2px solid $primary-black;
+    }
+  }
+
+  span {
+    font-weight: inherit;
+    font-size: inherit;
+  }
+}

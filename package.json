@@ -1,5 +1,4 @@
 {
-  "name": "turbor-demo",
   "private": true,
   "scripts": {
     "build": "turbo build",
@@ -8,15 +7,12 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "eslint": "^8.54.0",
     "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
     "prettier": "^3.1.0",
     "turbo": "latest"
   },
-  "engines": {
-    "node": ">=18"
-  },
-  "packageManager": "npm@9.5.1",
+  "packageManager": "yarn@1.22.19",
   "workspaces": [
     "apps/*",
     "packages/*"

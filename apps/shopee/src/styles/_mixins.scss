@@ -1,0 +1,33 @@
+/// Helper to size an element
+/// @author Tran Duc Manh
+/// @param {Length} $width
+/// @param {Length} $height
+
+$base-opacity: 1;
+
+@mixin sizes($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin background-opacity($color, $opacity: $base-opacity) {
+  background: rgba($color, $opacity);
+}
+
+@mixin truncate-text($line-count) {
+  /* stylelint-disable-next-line value-no-vendor-prefix */
+  display: -webkit-box;
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $line-count;
+  -webkit-box-orient: vertical;
+}
+
+@mixin hide-scrollbar {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
